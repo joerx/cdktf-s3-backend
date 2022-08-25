@@ -20,7 +20,7 @@ Since this entails a chicken-and-egg problem, the backend does not exist initial
 - Uncomment the backend, update the `bucket` property with the bucket name from the output 
 - Migrate Terraform state
 
-The `cdktf` CLI does not seem to have a built-in way to migrate the state, it will just fail when you change the backend. Luckily the synthesized stack is valid Terraform so we can do this:
+The `cdktf` CLI does not seem to have a built-in way to migrate the state, it will just fail when we change the backend. Luckily the synthesized stack is valid Terraform so we can do this:
 
 ```sh
 cdktf synth
