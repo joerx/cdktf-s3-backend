@@ -11,9 +11,7 @@ export class StateStoreStack extends TerraformStack {
   constructor(scope: Construct, name: string, props: StateStoreStackProps) {
     super(scope, name);
 
-    new AwsProvider(this, 'aws', {
-      region: 'ap-southeast-1'
-    });
+    new AwsProvider(this, 'aws', {});
 
     let sseConfig : s3.S3BucketServerSideEncryptionConfiguration | undefined
     if (props.encrypt) {
